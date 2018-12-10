@@ -1,9 +1,9 @@
 //without Server
 
-var request = require('request');
-var fs = require('fs');
-var open = require('open');
-var url = 'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=3';
+const request = require('request');
+const fs = require('fs');
+const open = require('open');
+const url = 'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=3';
 
 request(url, function(err, response, body) {
 	if(err) throw err;

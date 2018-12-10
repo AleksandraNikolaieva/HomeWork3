@@ -1,5 +1,5 @@
-var http = require('http');
-var fs = require('fs');
+const http = require('http');
+const fs = require('fs');
 
 http.createServer(function(req, res) {
 	switch(req.url) {
@@ -7,7 +7,7 @@ http.createServer(function(req, res) {
 			res.end('Hello World');
 			break;
 		case '/about':
-			console.log('url: ', req.url);
+			console.log('url:', req.url);
 			console.log('method:', req.method);
 			console.log('headers:\n', req.headers);
 			res.end();

@@ -1,8 +1,8 @@
 //with Server
 
-var http= require('http');
-var request = require('request');
-var url = 'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=3';
+const http= require('http');
+const request = require('request');
+const url = 'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=3';
 
 http.createServer(function(req, res) {
 	request(url, function(err, response, body) {
