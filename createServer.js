@@ -13,8 +13,9 @@ http.createServer(function(req, res) {
 			res.end();
 			break;
 		case '/stop':
+			req.connection.destroy();
 			this.close();
-			res.end();
+			res.end()
 			break;
 		case '/contact':
 			fs.readFile('contacts.html', function(err, data) {
